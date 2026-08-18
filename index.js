@@ -129,3 +129,9 @@ const totalPrice = products.reduce((total, product) => {
 }, 0)
 
 console.log(totalPrice)
+
+function getInStockProducts(products) {
+    return products.filter((product) => product.stock > 0)
+}
+
+console.log(getInStockProducts)
