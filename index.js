@@ -88,7 +88,7 @@ const budgetProducts = products.filter((product) => {
 
 console.log(budgetProducts)
 
-// const searchProduct = products.filter((product) => {
+// const searchProduct = products.find((product) => {
 //     return product.name === "Mouse"
 // })
 
@@ -100,3 +100,32 @@ const productWithA = products.filter((product) => {
 })
 
 console.log(productWithA)
+
+const findProduct = products.find((product) => {
+    return product.name === "Keyboard"
+})
+
+console.log(findProduct)
+
+const maxProduct = products.find((product) => {
+    return product.price > 200
+})
+
+console.log(maxProduct)
+
+const productPrice = products.map((product) => {
+    return product.price
+})
+console.log(productPrice)
+
+const productLabels = products.map((product) => {
+    return `${product.name} costs ${product.price}`
+})
+
+console.log(productLabels)
+
+const totalPrice = products.reduce((total, product) => {
+    return total + product.price
+}, 0)
+
+console.log(totalPrice)
