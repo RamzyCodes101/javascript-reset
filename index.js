@@ -188,4 +188,10 @@ function calculateDiscount(price, discount){
     return price - discountAmount
 }
 
-console.log(calculateDiscount(200, 20))
+
+function showPriceSale(name, price, discount){
+    const finalPrice = calculateDiscount(price, discount)
+    return `${name} now cost ${finalPrice}`
+}
+
+console.log(showPriceSale("Necklace", 200, 25))
