@@ -135,3 +135,57 @@ function getInStockProducts(products) {
 }
 
 console.log(getInStockProducts)
+
+//function
+function calculateInventoryValue(price, quantity) {
+    return price * quantity
+}
+
+const value = calculateInventoryValue(15, 4)
+console.log(value)
+
+function getInStock(quantity){
+    if(quantity > 0){
+        return "In stock"
+    }
+
+    return "Out of stock"
+}
+
+console.log(getInStock(8))
+console.log(getInStock(0))
+
+function getInStockStatus(quantity){
+    if(quantity === 0){
+        return "Out of stock"
+    } 
+    if (quantity <= 5){
+        return "low stock"
+    }
+    return "In stock"
+}
+
+console.log(getInStockStatus(0))
+console.log(getInStockStatus(3))
+console.log(getInStockStatus(10))
+
+function checkProductPrice(price) {
+    if(price >= 100){
+        return "Expensive"
+    }
+    if(price >= 50){
+        return "Moderate"
+    }
+    return "Affordable" // made a mistake of using else instead of return
+}
+
+console.log(checkProductPrice(150))
+console.log(checkProductPrice(70))
+console.log(checkProductPrice(20))
+
+function calculateDiscount(price, discount){
+    const discountAmount = price * discount / 100
+    return price - discountAmount
+}
+
+console.log(calculateDiscount(200, 20))
