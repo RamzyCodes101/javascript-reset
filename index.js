@@ -195,3 +195,38 @@ function showPriceSale(name, price, discount){
 }
 
 console.log(showPriceSale("Necklace", 200, 25))
+
+function calculateTax(price, taxRate){
+    return price * taxRate / 100
+}
+
+function calculatePriceWithTax(price, taxRate){
+    const taxAmount = calculateTax(price, taxRate)
+    return price + taxAmount
+}
+
+console.log(calculatePriceWithTax(100, 15))
+
+function calculateProfit( sellingPrice, costPrice){
+    const result = sellingPrice - costPrice
+    return result
+}
+
+console.log(calculateProfit(150, 100))
+console.log(calculateProfit(80, 100))
+
+function getProfitStatus(sellingPrice, costPrice){
+    const profit = calculateProfit(sellingPrice, costPrice)
+
+    if(profit > 0){
+        return `Profit: $${profit}`
+    }
+    else if(profit < 0) { //Math.abs turn negative no to positive no
+        return `Loss: $${Math.abs(profit)}`
+    }
+    return `no profit or loss`
+}
+
+console.log(getProfitStatus(150, 100))
+console.log(getProfitStatus(80,100))
+console.log(getProfitStatus(100,100))
