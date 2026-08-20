@@ -6,3 +6,5 @@ Was the reduce method, where i didn't actually remember where to put the the tot
 
 What do you want to remeber?
 I want to remember the four array methods and how to apply them cause each have their use. And also remember that function will make code reuseable so i should opt to make things simple 
+
+learnt not to hard code a value inside a function if you want to make it reusable
